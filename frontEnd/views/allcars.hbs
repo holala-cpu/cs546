@@ -1,0 +1,46 @@
+<h4> {{title}}</h4>
+
+{{!-- <ul class="list-group">
+  {{#each carArrDict}}
+  <li class="list-group-item">Owner: {{this.owner}}; Brand: {{this.make}}; Model: {{this.model}}; Color: {{this.color}}</li>
+  {{/each}}
+</ul>
+
+router.get('/cars', async (req, res) => {
+  try {
+    const walletPath = path.join(process.cwd(), '..','..', 'wallet');
+    const wallet = new FileSystemWallet(walletPath);
+    const userExists = await wallet.exists('user1');
+    if (!userExists) {
+      res.json({status: false, error: {message: 'User not exist in the wallet'}});
+      return;
+    }
+
+    const gateway = new Gateway();
+    await gateway.connect(ccpPath, { wallet, identity: 'user1', discovery: { enabled: true, asLocalhost: true } });
+    const network = await gateway.getNetwork('mychannel');
+    const contract = network.getContract('fabcar');
+    const result = await contract.evaluateTransaction('queryAllCars');
+    carArr = result.toString();
+    var carArrNew = JSON.parse(carArr);
+    for(ii=0; ii< carArrNew.length; ii++){
+      carArrDict.push(carArrNew[ii].Record)
+    }
+  
+    res.redirect('/allcars');
+    //res.json({status: false, cars: JSON.parse(result.toString())});
+  } catch (err) {
+    res.json({status: false, error: err});
+  }
+});
+
+
+router.get('/allcars',  (req, res) =>
+  res.render('allcars',{
+  title: 'All Cars',
+  carArr
+  })
+);
+
+
+ --}}

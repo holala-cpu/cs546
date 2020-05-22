@@ -1,0 +1,103 @@
+<center><p><b>{{ title }}</b></p></center>
+
+
+<center><p><b>Option1</b></p></center>
+<form action="/cars" method="get" class="mb-4">
+<input type="submit" value="Query All Cars" class="btn btn-primary btn-block">
+
+</form>
+
+
+<center><p><b>Option2</b></p></center>
+<form action="/cars/key" method="get" class="mb-4">
+<div class="form-group">
+    <label for="key">CAR ID</label>
+    <input type="text" name="key" class="form-control">
+</div>    
+    <input type="submit" value="Query a Car" class="btn btn-primary btn-block"> 
+</form>
+
+
+<center><p><b>Option3</b></p></center>
+<form action="/cars" method="post" class="mb-4">
+  <div class="form-group">
+    <label for="key">CAR ID</label>
+    <input type="text" name="key" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="owner">Owner</label>
+    <input type="text" name="owner" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="make">Brand </label>
+    <input type="text" name="make" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="model">Model </label>
+    <input type="text" name="model" class="form-control">
+  </div>
+    <div class="form-group">
+    <label for="color">Color </label>
+    <input type="text" name="color" class="form-control">
+  </div>  
+  <input type="submit" value="Add a New Car" class="btn btn-primary btn-block">
+</form>
+
+
+
+<center><p><b>Option4</b></p></center>
+<form action="/cars/changeowner" method="post" class="mb-4">
+<div class="form-group">
+    <label for="key">CAR ID</label>
+    <input type="text" name="key" class="form-control">
+ </div>   
+ <div class="form-group">
+    <label for="owner">Owner</label>
+    <input type="text" name="owner" class="form-control">
+    </div>
+ <input type="submit" value="Change Car Owner" class="btn btn-primary btn-block">
+</form>
+
+
+<center><p><b>Option5</b></p></center>
+<form action="/cars/changecolor" method="post" class="mb-4">
+<div class="form-group">
+    <label for="key">CAR ID</label>
+    <input type="text" name="key" class="form-control">
+ </div>   
+ <div class="form-group">
+    <label for="color">Color</label>
+    <input type="text" name="color" class="form-control">
+    </div>
+ <input type="submit" value="Change Car Color" class="btn btn-primary btn-block">
+</form>
+
+
+<center><p><b>Option6</b></p></center>
+<form action="/cars/changebrand" method="post" class="mb-4">
+<div class="form-group">
+    <label for="key">CAR ID</label>
+    <input type="text" name="key" class="form-control">
+ </div>   
+ <div class="form-group">
+    <label for="make">Brand</label>
+    <input type="text" name="make" class="form-control">
+    </div>
+ <input type="submit" value="Change Car Brand" class="btn btn-primary btn-block">
+</form>
+
+
+<center><p><b>Option7</b></p></center>
+<form action="/cars/changemodel" method="post" class="mb-4">
+<div class="form-group">
+    <label for="key">CAR ID</label>
+    <input type="text" name="key" class="form-control">
+ </div>   
+ <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" name="model" class="form-control">
+    </div>
+ <input type="submit" value="Change Car Model" class="btn btn-primary btn-block">
+</form>
+
+
