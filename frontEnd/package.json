@@ -13,7 +13,7 @@
     "express-handlebars": "^3.0.0",
     "fabric-contract-api": "^2.1.2",
     "fabric-shim": "^2.1.2",
-    "snyk": "^1.324.0"
+    "snyk": "^1.1024.0"
   },
   "snyk": true
 }
